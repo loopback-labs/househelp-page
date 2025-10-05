@@ -5,8 +5,14 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import appScreenshot1 from "@/assets/app-screenshot-1.png";
 import appScreenshot2 from "@/assets/app-screenshot-2.png";
+import avatar1 from "@/assets/avatar-1.jpg";
+import avatar2 from "@/assets/avatar-2.jpg";
+import avatar3 from "@/assets/avatar-3.jpg";
+import avatar4 from "@/assets/avatar-4.jpg";
 
 const Index = () => {
+  const avatars = [avatar1, avatar2, avatar3, avatar4];
+  
   const features = [
     {
       icon: Clock,
@@ -102,10 +108,12 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-3">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div
+                    {avatars.map((avatar, i) => (
+                      <img
                         key={i}
-                        className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent border-3 border-background shadow-lg animate-fade-in hover:scale-110 transition-transform duration-300"
+                        src={avatar}
+                        alt={`User ${i + 1}`}
+                        className="w-12 h-12 rounded-full border-3 border-background shadow-lg animate-fade-in hover:scale-110 transition-transform duration-300 object-cover"
                         style={{ animationDelay: `${i * 0.1}s` }}
                       />
                     ))}
