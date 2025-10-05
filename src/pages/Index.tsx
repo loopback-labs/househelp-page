@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Clock, DollarSign, Users, Calendar, FileText, TrendingUp, Lightbulb } from "lucide-react";
+import { CheckCircle2, Clock, DollarSign, Users, FileText, TrendingUp, Lightbulb } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import appScreenshot1 from "@/assets/app-screenshot-1.png";
 import appScreenshot2 from "@/assets/app-screenshot-2.png";
 
@@ -55,9 +56,12 @@ const Index = () => {
           <h2 className="text-2xl font-bold text-primary">
             househelp
           </h2>
-          <Button size="sm" className="bg-accent text-accent-foreground hover:opacity-90 transition-opacity font-medium">
-            Download App
-          </Button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <Button size="sm" className="bg-accent text-accent-foreground hover:opacity-90 transition-opacity font-medium">
+              Download App
+            </Button>
+          </div>
         </div>
       </nav>
 
@@ -85,7 +89,7 @@ const Index = () => {
               <div className="flex flex-wrap gap-4">
                 <Button 
                   size="lg" 
-                  className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-opacity shadow-lg font-medium"
+                  className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-all shadow-lg font-medium"
                   style={{ boxShadow: 'var(--shadow-elegant)' }}
                 >
                   Download for Free
@@ -214,18 +218,18 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 relative overflow-hidden bg-primary">
+      <section className="py-20 px-4 relative overflow-hidden bg-card border-y border-border">
         <div 
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: 'radial-gradient(circle at 20% 50%, hsl(158 64% 68%), transparent 50%), radial-gradient(circle at 80% 50%, hsl(158 64% 68%), transparent 50%)',
+            background: 'var(--gradient-hero)',
           }}
         />
         <div className="container mx-auto relative z-10 text-center space-y-8">
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary-foreground">
+          <h2 className="text-4xl lg:text-5xl font-bold">
             Start Managing Smarter Today
           </h2>
-          <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Join 1,000+ households using househelp to track attendance and manage salaries effortlessly. 
             Free to download and use.
           </p>
@@ -239,7 +243,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-lg px-8 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-colors"
+              className="text-lg px-8 border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
             >
               Download for Android
             </Button>
