@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, DollarSign, Users, FileText, TrendingUp, Lightbulb
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { useCounterAnimation } from "@/hooks/use-counter-animation";
+import { Link } from "react-router-dom";
 import appScreenshot1 from "@/assets/app-screenshot-1.png";
 import appScreenshot2 from "@/assets/app-screenshot-2.png";
 import avatar1 from "@/assets/avatar-1.jpg";
@@ -229,9 +230,9 @@ const Index = () => {
             </div>
             
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors">Privacy</a>
-              <a href="#" className="hover:text-primary transition-colors">Terms</a>
-              <a href="#" className="hover:text-primary transition-colors">Contact</a>
+              <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
+              <Link to="/terms" className="hover:text-primary transition-colors">Terms</Link>
+              <a href="mailto:support@househelp.com" className="hover:text-primary transition-colors">Contact</a>
             </div>
           </div>
           
