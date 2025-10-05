@@ -99,18 +99,26 @@ const Index = () => {
                   See Features
                 </Button>
               </div>
-              <div className="flex items-center gap-6 pt-4">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 rounded-full bg-accent/30 border-2 border-background"
-                    />
-                  ))}
+              <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-3">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div
+                        key={i}
+                        className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent border-3 border-background shadow-lg animate-fade-in hover:scale-110 transition-transform duration-300"
+                        style={{ animationDelay: `${i * 0.1}s` }}
+                      />
+                    ))}
+                  </div>
+                  <div className="h-12 w-px bg-border"></div>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">1,000+</span> households managing smarter
-                </p>
+                <div className="text-center sm:text-left animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl font-bold text-primary">1,000+</span>
+                    <span className="text-sm text-muted-foreground">households</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">managing smarter every day</p>
+                </div>
               </div>
             </div>
             <div className="relative">
