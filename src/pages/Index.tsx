@@ -10,57 +10,48 @@ import avatar1 from "@/assets/avatar-1.jpg";
 import avatar2 from "@/assets/avatar-2.jpg";
 import avatar3 from "@/assets/avatar-3.jpg";
 import avatar4 from "@/assets/avatar-4.jpg";
-
 const Index = () => {
   const avatars = [avatar1, avatar2, avatar3, avatar4];
-  const hoursCounter = useCounterAnimation({ end: 15, duration: 2000, suffix: "+" });
-  const accuracyCounter = useCounterAnimation({ end: 100, duration: 2000 });
-  const usersCounter = useCounterAnimation({ end: 1000, duration: 2500 });
-  
-  const features = [
-    {
-      icon: Clock,
-      title: "Smart Attendance Tracking",
-      description: "Mark attendance as Present, Half Day, Absent, or Pending with real-time tracking.",
-    },
-    {
-      icon: DollarSign,
-      title: "Automatic Salary Calculation",
-      description: "Salaries calculated automatically based on attendance records and work shifts.",
-    },
-    {
-      icon: Lightbulb,
-      title: "AI Insights",
-      description: "Get smart recommendations and insights about your house help management.",
-    },
-    {
-      icon: FileText,
-      title: "Payment History",
-      description: "Complete salary payment records with detailed transaction history.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Analytics Dashboard",
-      description: "Track attendance rates, shifts completed, and performance metrics.",
-    },
-    {
-      icon: Users,
-      title: "Multi-House Management",
-      description: "Manage multiple properties and house helpers from a single app.",
-    },
-  ];
-
-  const benefits = [
-    "Eliminate manual attendance registers and spreadsheets",
-    "Zero salary calculation errors with automatic computation",
-    "Track Present, Half Day, Absent, and Pending statuses",
-    "View attendance rates and shifts completed at a glance",
-    "AI-powered insights for better management decisions",
-    "Complete payment history at your fingertips",
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const hoursCounter = useCounterAnimation({
+    end: 15,
+    duration: 2000,
+    suffix: "+"
+  });
+  const accuracyCounter = useCounterAnimation({
+    end: 100,
+    duration: 2000
+  });
+  const usersCounter = useCounterAnimation({
+    end: 1000,
+    duration: 2500
+  });
+  const features = [{
+    icon: Clock,
+    title: "Smart Attendance Tracking",
+    description: "Mark attendance as Present, Half Day, Absent, or Pending with real-time tracking."
+  }, {
+    icon: DollarSign,
+    title: "Automatic Salary Calculation",
+    description: "Salaries calculated automatically based on attendance records and work shifts."
+  }, {
+    icon: Lightbulb,
+    title: "AI Insights",
+    description: "Get smart recommendations and insights about your house help management."
+  }, {
+    icon: FileText,
+    title: "Payment History",
+    description: "Complete salary payment records with detailed transaction history."
+  }, {
+    icon: TrendingUp,
+    title: "Analytics Dashboard",
+    description: "Track attendance rates, shifts completed, and performance metrics."
+  }, {
+    icon: Users,
+    title: "Multi-House Management",
+    description: "Manage multiple properties and house helpers from a single app."
+  }];
+  const benefits = ["Eliminate manual attendance registers and spreadsheets", "Zero salary calculation errors with automatic computation", "Track Present, Half Day, Absent, and Pending statuses", "View attendance rates and shifts completed at a glance", "AI-powered insights for better management decisions", "Complete payment history at your fingertips"];
+  return <div className="min-h-screen">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-lg border-b border-border z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -78,12 +69,9 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-        <div 
-          className="absolute inset-0 opacity-50"
-          style={{
-            background: 'var(--gradient-hero)',
-          }}
-        />
+        <div className="absolute inset-0 opacity-50" style={{
+        background: 'var(--gradient-hero)'
+      }} />
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -98,13 +86,9 @@ const Index = () => {
                 Simple, accurate, and built for modern households.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button 
-                  size="lg" 
-                  className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-all shadow-lg font-medium"
-                  style={{ boxShadow: 'var(--shadow-elegant)' }}
-                >
-                  Sign Up for Beta
-                </Button>
+                <Button size="lg" className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-all shadow-lg font-medium" style={{
+                boxShadow: 'var(--shadow-elegant)'
+              }}>Early access on Android</Button>
                 <Button size="lg" variant="outline" className="text-lg px-8">
                   See Features
                 </Button>
@@ -112,19 +96,15 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-3">
-                    {avatars.map((avatar, i) => (
-                      <img
-                        key={i}
-                        src={avatar}
-                        alt={`User ${i + 1}`}
-                        className="w-12 h-12 rounded-full border-3 border-background shadow-lg animate-fade-in hover:scale-110 transition-transform duration-300 object-cover"
-                        style={{ animationDelay: `${i * 0.1}s` }}
-                      />
-                    ))}
+                    {avatars.map((avatar, i) => <img key={i} src={avatar} alt={`User ${i + 1}`} className="w-12 h-12 rounded-full border-3 border-background shadow-lg animate-fade-in hover:scale-110 transition-transform duration-300 object-cover" style={{
+                    animationDelay: `${i * 0.1}s`
+                  }} />)}
                   </div>
                   <div className="h-12 w-px bg-border"></div>
                 </div>
-                <div className="text-center sm:text-left animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                <div className="text-center sm:text-left animate-fade-in" style={{
+                animationDelay: '0.5s'
+              }}>
                   <div className="flex items-baseline gap-2">
                     <span className="text-3xl font-bold text-primary">1,000+</span>
                     <span className="text-sm text-muted-foreground">households</span>
@@ -134,20 +114,10 @@ const Index = () => {
               </div>
             </div>
             <div className="relative">
-              <div 
-                className="absolute inset-0 bg-accent/10 blur-3xl rounded-full"
-              />
+              <div className="absolute inset-0 bg-accent/10 blur-3xl rounded-full" />
               <div className="relative flex gap-8 items-center justify-center">
-                <PhoneMockup
-                  image={appScreenshot1}
-                  alt="househelp App - Mark Attendance Screen"
-                  className="transform hover:scale-105 transition-transform duration-300"
-                />
-                <PhoneMockup
-                  image={appScreenshot2}
-                  alt="househelp App - Manage House Help Screen"
-                  className="transform hover:scale-105 transition-transform duration-300 mt-12"
-                />
+                <PhoneMockup image={appScreenshot1} alt="househelp App - Mark Attendance Screen" className="transform hover:scale-105 transition-transform duration-300" />
+                <PhoneMockup image={appScreenshot2} alt="househelp App - Manage House Help Screen" className="transform hover:scale-105 transition-transform duration-300 mt-12" />
               </div>
             </div>
           </div>
@@ -164,15 +134,10 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card 
-                key={index} 
-                className="border-none transition-all hover:translate-y-[-4px] hover:shadow-lg"
-                style={{ 
-                  boxShadow: 'var(--shadow-card)',
-                  transition: 'var(--transition-smooth)' 
-                }}
-              >
+            {features.map((feature, index) => <Card key={index} className="border-none transition-all hover:translate-y-[-4px] hover:shadow-lg" style={{
+            boxShadow: 'var(--shadow-card)',
+            transition: 'var(--transition-smooth)'
+          }}>
                 <CardContent className="p-6 space-y-4">
                   <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
                     <feature.icon className="w-6 h-6 text-accent" />
@@ -180,8 +145,7 @@ const Index = () => {
                   <h3 className="text-xl font-semibold">{feature.title}</h3>
                   <p className="text-muted-foreground">{feature.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -197,19 +161,16 @@ const Index = () => {
                 digitally with smart features designed for modern households.
               </p>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                     <p className="text-lg">{benefit}</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
             <div className="relative">
-              <Card 
-                className="p-8 border-2 border-accent/20 bg-card"
-                style={{ boxShadow: 'var(--shadow-elegant)' }}
-              >
+              <Card className="p-8 border-2 border-accent/20 bg-card" style={{
+              boxShadow: 'var(--shadow-elegant)'
+            }}>
                 <CardContent className="space-y-6 p-0">
                   <div className="space-y-2" ref={hoursCounter.ref}>
                     <p className="text-sm text-muted-foreground">Time saved monthly</p>
@@ -238,12 +199,9 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 relative overflow-hidden bg-card border-y border-border">
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            background: 'var(--gradient-hero)',
-          }}
-        />
+        <div className="absolute inset-0 opacity-30" style={{
+        background: 'var(--gradient-hero)'
+      }} />
         <div className="container mx-auto relative z-10 text-center space-y-8">
           <h2 className="text-4xl lg:text-5xl font-bold">
             Start Managing Smarter Today
@@ -253,19 +211,8 @@ const Index = () => {
             Free to download and use.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-opacity font-medium"
-            >
-              Download for iOS
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="text-lg px-8 border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-            >
-              Download for Android
-            </Button>
+            <Button size="lg" className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-opacity font-medium">Coming Soon on iOS</Button>
+            <Button size="lg" variant="outline" className="text-lg px-8 border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">Signup for Beta on Android</Button>
           </div>
         </div>
       </section>
@@ -293,8 +240,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
