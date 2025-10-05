@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Clock, DollarSign, Users, FileText, TrendingUp, Lightbulb } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { PhoneMockup } from "@/components/PhoneMockup";
 import appScreenshot1 from "@/assets/app-screenshot-1.png";
 import appScreenshot2 from "@/assets/app-screenshot-2.png";
 
@@ -116,18 +117,16 @@ const Index = () => {
               <div 
                 className="absolute inset-0 bg-accent/10 blur-3xl rounded-full"
               />
-              <div className="relative flex gap-4 items-center">
-                <img
-                  src={appScreenshot1}
+              <div className="relative flex gap-8 items-center justify-center">
+                <PhoneMockup
+                  image={appScreenshot1}
                   alt="househelp App - Mark Attendance Screen"
-                  className="relative rounded-3xl shadow-2xl max-w-[280px] border-4 border-border"
-                  style={{ boxShadow: 'var(--shadow-elegant)' }}
+                  className="transform hover:scale-105 transition-transform duration-300"
                 />
-                <img
-                  src={appScreenshot2}
+                <PhoneMockup
+                  image={appScreenshot2}
                   alt="househelp App - Manage House Help Screen"
-                  className="relative rounded-3xl shadow-2xl max-w-[280px] border-4 border-border"
-                  style={{ boxShadow: 'var(--shadow-elegant)' }}
+                  className="transform hover:scale-105 transition-transform duration-300 mt-12"
                 />
               </div>
             </div>
