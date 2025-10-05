@@ -205,25 +205,25 @@ const Index = () => {
                 ))}
               </div>
             </div>
-            <div className="relative" ref={hoursCounter.ref}>
+            <div className="relative">
               <Card 
                 className="p-8 border-2 border-accent/20 bg-card"
                 style={{ boxShadow: 'var(--shadow-elegant)' }}
               >
                 <CardContent className="space-y-6 p-0">
-                  <div className="space-y-2">
+                  <div className="space-y-2" ref={hoursCounter.ref}>
                     <p className="text-sm text-muted-foreground">Time saved monthly</p>
                     <p className="text-5xl font-bold text-accent tabular-nums">
                       {hoursCounter.displayValue} hours
                     </p>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-2" ref={accuracyCounter.ref}>
                     <p className="text-sm text-muted-foreground">Salary accuracy</p>
                     <p className="text-5xl font-bold text-accent tabular-nums">
                       {accuracyCounter.count}%
                     </p>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-2" ref={usersCounter.ref}>
                     <p className="text-sm text-muted-foreground">Active users</p>
                     <p className="text-5xl font-bold text-accent tabular-nums">
                       {usersCounter.displayValue}
