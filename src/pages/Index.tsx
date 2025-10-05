@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Clock, DollarSign, Users, FileText, TrendingUp, Lightbulb } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { PhoneMockup } from "@/components/PhoneMockup";
+import { useCounterAnimation } from "@/hooks/use-counter-animation";
 import appScreenshot1 from "@/assets/app-screenshot-1.png";
 import appScreenshot2 from "@/assets/app-screenshot-2.png";
 import avatar1 from "@/assets/avatar-1.jpg";
@@ -12,6 +13,9 @@ import avatar4 from "@/assets/avatar-4.jpg";
 
 const Index = () => {
   const avatars = [avatar1, avatar2, avatar3, avatar4];
+  const hoursCounter = useCounterAnimation({ end: 15, duration: 2000, suffix: "+" });
+  const accuracyCounter = useCounterAnimation({ end: 100, duration: 2000 });
+  const usersCounter = useCounterAnimation({ end: 1000, duration: 2500 });
   
   const features = [
     {
@@ -201,7 +205,7 @@ const Index = () => {
                 ))}
               </div>
             </div>
-            <div className="relative">
+            <div className="relative" ref={hoursCounter.ref}>
               <Card 
                 className="p-8 border-2 border-accent/20 bg-card"
                 style={{ boxShadow: 'var(--shadow-elegant)' }}
@@ -209,20 +213,20 @@ const Index = () => {
                 <CardContent className="space-y-6 p-0">
                   <div className="space-y-2">
                     <p className="text-sm text-muted-foreground">Time saved monthly</p>
-                    <p className="text-5xl font-bold text-accent">
-                      15+ hours
+                    <p className="text-5xl font-bold text-accent tabular-nums">
+                      {hoursCounter.displayValue} hours
                     </p>
                   </div>
                   <div className="space-y-2">
                     <p className="text-sm text-muted-foreground">Salary accuracy</p>
-                    <p className="text-5xl font-bold text-accent">
-                      100%
+                    <p className="text-5xl font-bold text-accent tabular-nums">
+                      {accuracyCounter.count}%
                     </p>
                   </div>
                   <div className="space-y-2">
                     <p className="text-sm text-muted-foreground">Active users</p>
-                    <p className="text-5xl font-bold text-accent">
-                      1,000+
+                    <p className="text-5xl font-bold text-accent tabular-nums">
+                      {usersCounter.displayValue}
                     </p>
                   </div>
                 </CardContent>
