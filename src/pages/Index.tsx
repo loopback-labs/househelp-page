@@ -103,7 +103,7 @@ const Index = () => {
                   className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-all shadow-lg font-medium"
                   style={{ boxShadow: 'var(--shadow-elegant)' }}
                 >
-                  Download for Free
+                  Sign Up for Beta
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8">
                   See Features
