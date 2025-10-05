@@ -1,59 +1,61 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Clock, DollarSign, Users, Calendar, FileText } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import { CheckCircle2, Clock, DollarSign, Users, Calendar, FileText, TrendingUp, Lightbulb } from "lucide-react";
+import appScreenshot1 from "@/assets/app-screenshot-1.png";
+import appScreenshot2 from "@/assets/app-screenshot-2.png";
 
 const Index = () => {
   const features = [
     {
       icon: Clock,
-      title: "Attendance Tracking",
-      description: "Mark daily attendance with timestamps. Never miss a day's record.",
+      title: "Smart Attendance Tracking",
+      description: "Mark attendance as Present, Half Day, Absent, or Pending with real-time tracking.",
     },
     {
       icon: DollarSign,
-      title: "Salary Management",
-      description: "Calculate and manage monthly salaries automatically based on attendance.",
+      title: "Automatic Salary Calculation",
+      description: "Salaries calculated automatically based on attendance records and work shifts.",
     },
     {
-      icon: Calendar,
-      title: "Leave Management",
-      description: "Track leaves, holidays, and absences in one centralized system.",
-    },
-    {
-      icon: Users,
-      title: "Staff Profiles",
-      description: "Maintain detailed profiles with contact info, documents, and history.",
+      icon: Lightbulb,
+      title: "AI Insights",
+      description: "Get smart recommendations and insights about your house help management.",
     },
     {
       icon: FileText,
       title: "Payment History",
-      description: "Complete records of all salary payments and deductions.",
+      description: "Complete salary payment records with detailed transaction history.",
     },
     {
-      icon: CheckCircle2,
-      title: "Reports & Analytics",
-      description: "Generate monthly reports and track attendance patterns effortlessly.",
+      icon: TrendingUp,
+      title: "Analytics Dashboard",
+      description: "Track attendance rates, shifts completed, and performance metrics.",
+    },
+    {
+      icon: Users,
+      title: "Multi-House Management",
+      description: "Manage multiple properties and house helpers from a single app.",
     },
   ];
 
   const benefits = [
-    "Save hours of manual tracking every month",
-    "Reduce salary calculation errors",
-    "Maintain transparent payment records",
-    "Access data anytime, anywhere",
-    "Simple interface - no training needed",
+    "Eliminate manual attendance registers and spreadsheets",
+    "Zero salary calculation errors with automatic computation",
+    "Track Present, Half Day, Absent, and Pending statuses",
+    "View attendance rates and shifts completed at a glance",
+    "AI-powered insights for better management decisions",
+    "Complete payment history at your fingertips",
   ];
 
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-border z-50">
+      <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-lg border-b border-border z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <h2 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            HouseHelp Manager
+          <h2 className="text-2xl font-bold text-primary">
+            househelp
           </h2>
-          <Button size="sm" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
+          <Button size="sm" className="bg-accent text-accent-foreground hover:opacity-90 transition-opacity font-medium">
             Download App
           </Button>
         </div>
@@ -71,25 +73,25 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                Manage Your Househelp{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Effortlessly
+                Manage House Help{" "}
+                <span className="text-accent">
+                  Attendance & Salary
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Track attendance, calculate salaries, and manage your domestic staff with ease. 
-                Everything you need in one simple mobile app.
+                Track daily attendance, calculate salaries automatically, and get AI-powered insights. 
+                Simple, accurate, and built for modern households.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button 
                   size="lg" 
-                  className="text-lg px-8 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg"
+                  className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-opacity shadow-lg font-medium"
                   style={{ boxShadow: 'var(--shadow-elegant)' }}
                 >
-                  Get Started Free
+                  Download for Free
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8">
-                  Watch Demo
+                  See Features
                 </Button>
               </div>
               <div className="flex items-center gap-6 pt-4">
@@ -97,25 +99,33 @@ const Index = () => {
                   {[1, 2, 3, 4].map((i) => (
                     <div
                       key={i}
-                      className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent border-2 border-background"
+                      className="w-10 h-10 rounded-full bg-accent/30 border-2 border-background"
                     />
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">500+</span> households already managing better
+                  <span className="font-semibold text-foreground">1,000+</span> households managing smarter
                 </p>
               </div>
             </div>
             <div className="relative">
               <div 
-                className="absolute inset-0 bg-gradient-to-br from-primary to-accent opacity-20 blur-3xl"
+                className="absolute inset-0 bg-accent/10 blur-3xl rounded-full"
               />
-              <img
-                src={heroImage}
-                alt="HouseHelp Manager App Interface"
-                className="relative rounded-2xl shadow-2xl"
-                style={{ boxShadow: 'var(--shadow-elegant)' }}
-              />
+              <div className="relative flex gap-4 items-center">
+                <img
+                  src={appScreenshot1}
+                  alt="househelp App - Mark Attendance Screen"
+                  className="relative rounded-3xl shadow-2xl max-w-[280px] border-4 border-border"
+                  style={{ boxShadow: 'var(--shadow-elegant)' }}
+                />
+                <img
+                  src={appScreenshot2}
+                  alt="househelp App - Manage House Help Screen"
+                  className="relative rounded-3xl shadow-2xl max-w-[280px] border-4 border-border"
+                  style={{ boxShadow: 'var(--shadow-elegant)' }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -125,9 +135,9 @@ const Index = () => {
       <section className="py-20 px-4 bg-secondary/50">
         <div className="container mx-auto">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl font-bold">Everything You Need</h2>
+            <h2 className="text-4xl font-bold">Features That Make a Difference</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Powerful features designed to simplify household staff management
+              Everything you need to track attendance, manage salaries, and stay organized
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -141,8 +151,8 @@ const Index = () => {
                 }}
               >
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                    <feature.icon className="w-6 h-6 text-primary-foreground" />
+                  <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
+                    <feature.icon className="w-6 h-6 text-accent" />
                   </div>
                   <h3 className="text-xl font-semibold">{feature.title}</h3>
                   <p className="text-muted-foreground">{feature.description}</p>
@@ -158,15 +168,15 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold">Why Choose HouseHelp Manager?</h2>
+              <h2 className="text-4xl font-bold">Why Choose househelp?</h2>
               <p className="text-lg text-muted-foreground">
-                Stop using messy notebooks and confusing spreadsheets. Our app makes 
-                managing your household staff simple, accurate, and stress-free.
+                Say goodbye to messy notebooks and error-prone spreadsheets. Track everything 
+                digitally with smart features designed for modern households.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                     <p className="text-lg">{benefit}</p>
                   </div>
                 ))}
@@ -174,26 +184,26 @@ const Index = () => {
             </div>
             <div className="relative">
               <Card 
-                className="p-8 border-2 border-primary/20"
+                className="p-8 border-2 border-accent/20 bg-card"
                 style={{ boxShadow: 'var(--shadow-elegant)' }}
               >
                 <CardContent className="space-y-6 p-0">
                   <div className="space-y-2">
-                    <p className="text-sm text-muted-foreground">Average time saved per month</p>
-                    <p className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      10+ hours
+                    <p className="text-sm text-muted-foreground">Time saved monthly</p>
+                    <p className="text-5xl font-bold text-accent">
+                      15+ hours
                     </p>
                   </div>
                   <div className="space-y-2">
-                    <p className="text-sm text-muted-foreground">Calculation accuracy</p>
-                    <p className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    <p className="text-sm text-muted-foreground">Salary accuracy</p>
+                    <p className="text-5xl font-bold text-accent">
                       100%
                     </p>
                   </div>
                   <div className="space-y-2">
-                    <p className="text-sm text-muted-foreground">User satisfaction</p>
-                    <p className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      4.8/5
+                    <p className="text-sm text-muted-foreground">Active users</p>
+                    <p className="text-5xl font-bold text-accent">
+                      1,000+
                     </p>
                   </div>
                 </CardContent>
@@ -204,32 +214,32 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 relative overflow-hidden">
+      <section className="py-20 px-4 relative overflow-hidden bg-primary">
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 opacity-10"
           style={{
-            background: 'var(--gradient-primary)',
+            backgroundImage: 'radial-gradient(circle at 20% 50%, hsl(158 64% 68%), transparent 50%), radial-gradient(circle at 80% 50%, hsl(158 64% 68%), transparent 50%)',
           }}
         />
         <div className="container mx-auto relative z-10 text-center space-y-8">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white">
-            Ready to Simplify Staff Management?
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary-foreground">
+            Start Managing Smarter Today
           </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Join hundreds of households already managing their staff better. 
-            Download the app today and get started for free.
+          <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
+            Join 1,000+ households using househelp to track attendance and manage salaries effortlessly. 
+            Free to download and use.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button 
               size="lg" 
-              className="text-lg px-8 bg-white text-primary hover:bg-white/90 transition-colors"
+              className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-opacity font-medium"
             >
               Download for iOS
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-lg px-8 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary transition-colors"
+              className="text-lg px-8 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-colors"
             >
               Download for Android
             </Button>
@@ -242,9 +252,9 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <h3 className="font-bold text-lg">HouseHelp Manager</h3>
+              <h3 className="font-bold text-lg">househelp</h3>
               <p className="text-sm text-muted-foreground">
-                Making household staff management simple and efficient.
+                Smart attendance tracking and salary management for modern households.
               </p>
             </div>
             <div className="space-y-3">
@@ -272,7 +282,7 @@ const Index = () => {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            © 2025 HouseHelp Manager. All rights reserved.
+            © 2025 househelp. All rights reserved.
           </div>
         </div>
       </footer>
