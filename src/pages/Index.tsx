@@ -5,6 +5,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { useCounterAnimation } from "@/hooks/use-counter-animation";
 import { Link } from "react-router-dom";
+import { EmailSignupForm } from "@/components/EmailSignupForm";
 import appScreenshot1 from "@/assets/app-screenshot-1.png";
 import appScreenshot2 from "@/assets/app-screenshot-2.png";
 import avatar1 from "@/assets/avatar-1.jpg";
@@ -205,16 +206,20 @@ const Index = () => {
       }} />
         <div className="container mx-auto relative z-10 text-center space-y-6 md:space-y-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            Start Managing Smarter Today
+            Get Early Access
           </h2>
           <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Join 1,000+ households using househelp to track attendance and manage salaries effortlessly. 
-            Free to download and use.
+            Sign up to be notified when we launch.
           </p>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center px-4">
-            <Button size="lg" className="text-base md:text-lg px-6 md:px-8 bg-accent text-accent-foreground hover:opacity-90 transition-opacity font-medium w-full sm:w-auto">Coming Soon on iOS</Button>
+          
+          <div className="px-4">
+            <EmailSignupForm />
+          </div>
+
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center px-4 pt-4">
             <Button size="lg" variant="outline" asChild className="text-base md:text-lg px-6 md:px-8 border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors w-full sm:w-auto">
-              <a href="https://play.google.com/apps/internaltest/4701549005564270618" target="_blank" rel="noopener noreferrer">Signup for Beta on Android</a>
+              <a href="https://play.google.com/apps/internaltest/4701549005564270618" target="_blank" rel="noopener noreferrer">Try Beta on Android</a>
             </Button>
           </div>
         </div>
