@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Clock, DollarSign, Users, FileText, TrendingUp, Lightbulb } from "lucide-react";
+import { CheckCircle2, Clock, IndianRupee, Users, FileText, TrendingUp, Lightbulb } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { useCounterAnimation } from "@/hooks/use-counter-animation";
@@ -32,7 +32,7 @@ const Index = () => {
     title: "Smart Attendance Tracking",
     description: "Mark attendance as Present, Half Day, Absent, or Pending with real-time tracking."
   }, {
-    icon: DollarSign,
+    icon: IndianRupee,
     title: "Automatic Salary Calculation",
     description: "Salaries calculated automatically based on attendance records and work shifts."
   }, {
