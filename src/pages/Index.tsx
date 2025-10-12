@@ -215,7 +215,9 @@ const Index = () => {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-opacity font-medium">Coming Soon on iOS</Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">Signup for Beta on Android</Button>
+            <Button size="lg" variant="outline" asChild className="text-lg px-8 border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
+              <a href="https://play.google.com/apps/internaltest/4701549005564270618" target="_blank" rel="noopener noreferrer">Signup for Beta on Android</a>
+            </Button>
           </div>
         </div>
       </section>
