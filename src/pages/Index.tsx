@@ -87,9 +87,11 @@ const Index = () => {
                 Simple, accurate, and built for modern households.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-all shadow-lg font-medium" style={{
+              <Button size="lg" asChild className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-all shadow-lg font-medium" style={{
                 boxShadow: 'var(--shadow-elegant)'
-              }}>Early access on Android</Button>
+              }}>
+                <a href="https://play.google.com/apps/internaltest/4701549005564270618" target="_blank" rel="noopener noreferrer">Early access on Android</a>
+              </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8">
                   See Features
                 </Button>
