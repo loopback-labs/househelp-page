@@ -61,9 +61,7 @@ const Index = () => {
           </h2>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Button size="sm" className="bg-accent text-accent-foreground hover:opacity-90 transition-opacity font-medium">
-              Download App
-            </Button>
+            
           </div>
         </div>
       </nav>
