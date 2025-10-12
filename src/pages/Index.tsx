@@ -67,54 +67,54 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-24 md:pt-32 pb-12 md:pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-50" style={{
         background: 'var(--gradient-hero)'
       }} />
         <div className="container mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-6 md:space-y-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Manage House Help{" "}
                 <span className="text-accent">
                   Attendance & Salary
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Track daily attendance, calculate salaries automatically, and get AI-powered insights. 
                 Simple, accurate, and built for modern households.
               </p>
-              <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-all shadow-lg font-medium" style={{
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
+              <Button size="lg" asChild className="text-base md:text-lg px-6 md:px-8 bg-accent text-accent-foreground hover:opacity-90 transition-all shadow-lg font-medium w-full sm:w-auto" style={{
                 boxShadow: 'var(--shadow-elegant)'
               }}>
                 <a href="https://play.google.com/apps/internaltest/4701549005564270618" target="_blank" rel="noopener noreferrer">Early access on Android</a>
               </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8">
+                <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 w-full sm:w-auto">
                   See Features
                 </Button>
               </div>
-              <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
+              <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 pt-4">
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-3">
-                    {avatars.map((avatar, i) => <img key={i} src={avatar} alt={`User ${i + 1}`} className="w-12 h-12 rounded-full border-3 border-background shadow-lg animate-fade-in hover:scale-110 transition-transform duration-300 object-cover" style={{
+                    {avatars.map((avatar, i) => <img key={i} src={avatar} alt={`User ${i + 1}`} className="w-10 sm:w-12 h-10 sm:h-12 rounded-full border-3 border-background shadow-lg animate-fade-in hover:scale-110 transition-transform duration-300 object-cover" style={{
                     animationDelay: `${i * 0.1}s`
                   }} />)}
                   </div>
-                  <div className="h-12 w-px bg-border"></div>
+                  <div className="h-10 sm:h-12 w-px bg-border"></div>
                 </div>
                 <div className="text-center sm:text-left animate-fade-in" style={{
                 animationDelay: '0.5s'
               }}>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-bold text-primary">1,000+</span>
-                    <span className="text-sm text-muted-foreground">households</span>
+                    <span className="text-2xl sm:text-3xl font-bold text-primary">1,000+</span>
+                    <span className="text-xs sm:text-sm text-muted-foreground">households</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">managing smarter every day</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">managing smarter every day</p>
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative hidden lg:block">
               <div className="absolute inset-0 bg-accent/10 blur-3xl rounded-full" />
               <div className="relative flex gap-8 items-center justify-center">
                 <PhoneMockup image={appScreenshot1} alt="househelp App - Mark Attendance Screen" className="transform hover:scale-105 transition-transform duration-300" />
@@ -126,11 +126,11 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-secondary/50">
+      <section className="py-12 md:py-20 px-4 bg-secondary/50">
         <div className="container mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl font-bold">Features That Make a Difference</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold">Features That Make a Difference</h2>
+            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Everything you need to track attendance, manage salaries, and stay organized
             </p>
           </div>
@@ -152,42 +152,42 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 md:py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-4xl font-bold">Why Choose househelp?</h2>
-              <p className="text-lg text-muted-foreground">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-4 md:space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold">Why Choose househelp?</h2>
+              <p className="text-base md:text-lg text-muted-foreground">
                 Say goodbye to messy notebooks and error-prone spreadsheets. Track everything 
                 digitally with smart features designed for modern households.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                    <p className="text-lg">{benefit}</p>
+                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-accent flex-shrink-0 mt-1" />
+                    <p className="text-sm md:text-lg">{benefit}</p>
                   </div>)}
               </div>
             </div>
-            <div className="relative">
-              <Card className="p-8 border-2 border-accent/20 bg-card" style={{
+            <div className="relative mt-8 lg:mt-0">
+              <Card className="p-6 md:p-8 border-2 border-accent/20 bg-card" style={{
               boxShadow: 'var(--shadow-elegant)'
             }}>
-                <CardContent className="space-y-6 p-0">
+                <CardContent className="space-y-4 md:space-y-6 p-0">
                   <div className="space-y-2" ref={hoursCounter.ref}>
-                    <p className="text-sm text-muted-foreground">Time saved monthly</p>
-                    <p className="text-5xl font-bold text-accent tabular-nums">
+                    <p className="text-xs md:text-sm text-muted-foreground">Time saved monthly</p>
+                    <p className="text-3xl md:text-5xl font-bold text-accent tabular-nums">
                       {hoursCounter.displayValue} hours
                     </p>
                   </div>
                   <div className="space-y-2" ref={accuracyCounter.ref}>
-                    <p className="text-sm text-muted-foreground">Salary accuracy</p>
-                    <p className="text-5xl font-bold text-accent tabular-nums">
+                    <p className="text-xs md:text-sm text-muted-foreground">Salary accuracy</p>
+                    <p className="text-3xl md:text-5xl font-bold text-accent tabular-nums">
                       {accuracyCounter.count}%
                     </p>
                   </div>
                   <div className="space-y-2" ref={usersCounter.ref}>
-                    <p className="text-sm text-muted-foreground">Active users</p>
-                    <p className="text-5xl font-bold text-accent tabular-nums">
+                    <p className="text-xs md:text-sm text-muted-foreground">Active users</p>
+                    <p className="text-3xl md:text-5xl font-bold text-accent tabular-nums">
                       {usersCounter.displayValue}
                     </p>
                   </div>
@@ -199,21 +199,21 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 relative overflow-hidden bg-card border-y border-border">
+      <section className="py-12 md:py-20 px-4 relative overflow-hidden bg-card border-y border-border">
         <div className="absolute inset-0 opacity-30" style={{
         background: 'var(--gradient-hero)'
       }} />
-        <div className="container mx-auto relative z-10 text-center space-y-8">
-          <h2 className="text-4xl lg:text-5xl font-bold">
+        <div className="container mx-auto relative z-10 text-center space-y-6 md:space-y-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
             Start Managing Smarter Today
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Join 1,000+ households using househelp to track attendance and manage salaries effortlessly. 
             Free to download and use.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 bg-accent text-accent-foreground hover:opacity-90 transition-opacity font-medium">Coming Soon on iOS</Button>
-            <Button size="lg" variant="outline" asChild className="text-lg px-8 border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center px-4">
+            <Button size="lg" className="text-base md:text-lg px-6 md:px-8 bg-accent text-accent-foreground hover:opacity-90 transition-opacity font-medium w-full sm:w-auto">Coming Soon on iOS</Button>
+            <Button size="lg" variant="outline" asChild className="text-base md:text-lg px-6 md:px-8 border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors w-full sm:w-auto">
               <a href="https://play.google.com/apps/internaltest/4701549005564270618" target="_blank" rel="noopener noreferrer">Signup for Beta on Android</a>
             </Button>
           </div>
