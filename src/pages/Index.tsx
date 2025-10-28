@@ -98,22 +98,16 @@ const Index = () => {
                 and built for modern households.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
-                <Button
-                  size="lg"
-                  asChild
-                  className="text-base md:text-lg px-6 md:px-8 bg-accent text-accent-foreground hover:opacity-90 transition-all shadow-lg font-medium w-full sm:w-auto"
-                  style={{
-                    boxShadow: "var(--shadow-elegant)",
-                  }}
-                >
-                  <a
-                    href="https://play.google.com/apps/internaltest/4701549005564270618"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Early access on Android
-                  </a>
-                </Button>
+              <Button
+                size="lg"
+                onClick={() => document.getElementById('email-signup')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-base md:text-lg px-6 md:px-8 bg-accent text-accent-foreground hover:opacity-90 transition-all shadow-lg font-medium w-full sm:w-auto"
+                style={{
+                  boxShadow: "var(--shadow-elegant)",
+                }}
+              >
+                Early access on Android
+              </Button>
                 <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 w-full sm:w-auto">
                   See Features
                 </Button>
@@ -265,7 +259,7 @@ const Index = () => {
             notified when we launch.
           </p>
 
-          <div className="px-4">
+          <div id="email-signup" className="px-4">
             <EmailSignupForm />
           </div>
 
