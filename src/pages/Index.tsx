@@ -108,9 +108,14 @@ const Index = () => {
               >
                 Early access on Android
               </Button>
-                <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 w-full sm:w-auto">
-                  See Features
-                </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                onClick={() => document.getElementById('features-section')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-base md:text-lg px-6 md:px-8 w-full sm:w-auto"
+              >
+                See Features
+              </Button>
               </div>
               <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 pt-4">
                 <div className="flex items-center gap-3">
@@ -163,7 +168,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-12 md:py-20 px-4 bg-secondary/50">
+      <section id="features-section" className="py-12 md:py-20 px-4 bg-secondary/50">
         <div className="container mx-auto">
           <div className="text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold">Features That Make a Difference</h2>
