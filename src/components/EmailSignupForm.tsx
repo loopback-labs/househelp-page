@@ -5,7 +5,6 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 
@@ -14,10 +13,11 @@ const emailSchema = z.object({
 });
 
 type EmailFormValues = z.infer<typeof emailSchema>;
+const workerUrl = import.meta.env.VITE_WORKER_URL;
 
 export function EmailSignupForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const form = useForm<EmailFormValues>({
     resolver: zodResolver(emailSchema),
     defaultValues: {
@@ -26,24 +26,33 @@ export function EmailSignupForm() {
   });
 
   const onSubmit = async (data: EmailFormValues) => {
-    setIsSubmitting(true);
-    
-    try {
-      const { error } = await supabase
-        .from('email_signups')
-        .insert([{ email: data.email }]);
+    if (!workerUrl) {
+      toast.error("Waitlist is temporarily unavailable. Please try again later.");
+      return;
+    }
 
-      if (error) {
-        if (error.code === '23505') {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(workerUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: data.email }),
+      });
+
+      if (!response.ok) {
+        if (response.status === 409) {
           toast.error("This email is already registered!");
         } else {
           toast.error("Something went wrong. Please try again.");
         }
-      } else {
-        toast.success("Thanks for signing up! We'll keep you updated.");
-        form.reset();
+        return;
       }
-    } catch (error) {
+
+      toast.success("Thanks for signing up! We'll keep you updated.");
+      form.reset();
+    } catch {
       toast.error("An error occurred. Please try again later.");
     } finally {
       setIsSubmitting(false);
