@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Privacy = () => {
   return (
@@ -14,7 +14,7 @@ const Privacy = () => {
         </Link>
 
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-        
+
         <div className="space-y-6 text-muted-foreground">
           <section className="space-y-3">
             <h2 className="text-2xl font-semibold text-foreground">1. Information We Collect</h2>
@@ -43,8 +43,8 @@ const Privacy = () => {
           <section className="space-y-3">
             <h2 className="text-2xl font-semibold text-foreground">3. Data Security</h2>
             <p>
-              We implement appropriate security measures to protect your personal information. 
-              Your data is encrypted in transit and at rest. We regularly review and update our 
+              We implement appropriate security measures to protect your personal information.
+              Your data is encrypted in transit and at rest. We regularly review and update our
               security practices to ensure your information remains safe.
             </p>
           </section>
@@ -52,7 +52,7 @@ const Privacy = () => {
           <section className="space-y-3">
             <h2 className="text-2xl font-semibold text-foreground">4. Data Sharing</h2>
             <p>
-              We do not sell your personal information. We may share your information only in the 
+              We do not sell your personal information. We may share your information only in the
               following circumstances:
             </p>
             <ul className="list-disc pl-6 space-y-2">
@@ -78,8 +78,8 @@ const Privacy = () => {
             <h2 className="text-2xl font-semibold text-foreground">6. Contact Us</h2>
             <p>
               If you have any questions about this Privacy Policy, please contact us at{" "}
-              <a href="mailto:privacy@househelp.com" className="text-accent hover:underline">
-                privacy@househelp.com
+              <a href="mailto:contactus@merchandice.in" className="text-accent hover:underline">
+                contactus@merchandice.in
               </a>
             </p>
           </section>
