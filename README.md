@@ -1,6 +1,6 @@
 # househelp-page
 
-Marketing site for `househelp`, built with React + Vite + Tailwind CSS.
+Waitlist site for `househelp`, built with React + Vite + Tailwind CSS.
 
 ## Local development
 
